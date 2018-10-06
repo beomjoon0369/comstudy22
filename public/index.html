@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
@@ -16,50 +17,306 @@
     <script defer src="/__/firebase/init.js"></script>
 
     <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        body {
+            background: #ECEFF1;
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-      });
+
+        /*#message {
+            background: white;
+            max-width: 360px;
+            margin: 100px auto 16px;
+            padding: 32px 24px;
+            border-radius: 3px;
+
+            display: none;
+        }
+
+        #message h2 {
+            color: #ffa100;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        #message h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 0 0 16px;
+        }
+
+        #message p {
+            line-height: 140%;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+
+        #message a {
+            display: block;
+            text-align: center;
+            background: #039be5;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            border-radius: 4px;
+        }
+
+        #message,
+        #message a {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        #load {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 13px;
+        }*/
+
+        /*@media (max-width: 800px) {
+
+            body,
+            #message {
+                margin-top: 0;
+                background: white;
+                box-shadow: none;
+            }
+
+            body {
+                border-top: 16px solid #ffa100;
+            }
+
+            div#contents {
+                margin: 0;
+                box-sizing: border-box;
+                border-radius: 0px;
+                padding: 10px;
+            }
+        }*/
+
+        header {
+            background-color: dodgerblue;
+            /*margin: auto;*/
+            /*width 100%;
+            min-width: 1024px;*/
+        }
+
+        header h2 {
+            color: navy;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        header h1 {
+            font-size: 27px;
+            font-weight: 700;
+            color: lightyellow;
+            margin: 0 0 16px;
+            text-shadow: 1px 1px 2px navy;
+            text-align: center;
+        }
+
+        header p {
+            color: yellowgreen;
+            text-shadow: 1px 1px 2px navy;
+            font-size: 14px;
+            margin: 0 0 8px;
+            text-align: center;
+        }
+
+        header nav li {
+            list-style: none;
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            float: left;
+            font-size: 12pt;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header nav li:hover {
+            font-weight: 600;
+            background-color: aquamarine;
+            border-bottom: 4px solid navy;
+            color: navajowhite;
+            text-shadow: 1px 1px 2px navy;
+            cursor: pointer;
+        }
+
+        nav ul {
+            position: fixed;
+            overflow: hidden;
+            /*background-color:rgb(122, 207, 248);*/
+            padding: 0;
+            border-bottom: 1px solid lightgray;
+            box-sizing: border-box;
+            z-index: 101;
+            width: 750px;
+            margin: auto;
+            left: 50%;
+            margin-left: -375px;
+        }
+
+        div#ul_back div {
+            position: absolute;
+            height: 60px;
+            width: 100%;
+            background-color: lightskyblue;
+            border-bottom: 3px solid dodgerblue;
+            z-index: 100;
+            box-sizing: border-box;
+        }
+
+        nav div#ul_back {
+            position: relative;
+            height: 60px;
+            width: 100%;
+        }
+
+        div#contents {
+            background-color: white;
+            margin: 8px auto;
+            border-radius: 6px;
+            border-bottom: 1px solid gray;
+            box-shadow: 2px 1px 2px gray;
+            /*height: 400px;*/
+            overflow: hidden;
+            max-width: 1024px;
+            min-width: 800px;
+        }
+
+        div#page {
+            width: 100%
+        }
+
+        div#page div#head {
+            width: 100%;
+            background-color: dodgerblue;
+        }
+
+        div#contents .leftSide,
+        div#contents .centerMain {
+            margin: 0;
+            float: left;
+            box-sizing: border-box;
+            border-bottom-right-radius: 6px;
+            padding: 10px;
+        }
+
+        div#contents .leftSide {
+            width: 19%;
+
+        }
+
+        div#contents .centerMain {
+            width: 80%;
+            height: 400px;
+            border-left: 1px solid gray;
+        }
+
+        #mainTitle {
+            border-left: 4px solid dodgerblue;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 8px;
+            background-color: skyblue;
+            color: navy;
+        }
+        #page {
+            width: 100%;
+            min-width: 1024px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="head">
+            <header>
+                <h2>취업과 창업이 바로 연결되는 살아있는 기술</h2>
+                <h1>범준쌤의 코딩교실</h1>
+                <p>인생은 짧다~ 즐겁게 코딩하고 재미있게 살자!</p>
+                <nav>
+                    <div id="ul_back">
+                        <div></div>
+                        <ul>
+                            <li>HOME</li>
+                            <li>코딩교실소개</li>
+                            <li>모집중인과정</li>
+                            <li>인터넷강의</li>
+                            <li>커뮤니티</li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div id="contents">
+            <div class="leftSide">
+                <p>left side</p>
+                <ul>
+                    <li>link 01</li>
+                    <li>link 02</li>
+                    <li>link 03</li>
+                    <li>link 04</li>
+                    <li>link 05</li>
+                </ul>
+            </div>
+            <div class="centerMain">
+                <p id="mainTitle">범준쌤 코딩교실을 곧 오픈 합니다.</p>
+                <p id="main">center main</p>
+            </div>
+        </div>
+        <!--<div id="message">
+            <h2>취업 및 창업과 바로 연결되는 살아있는 기술</h2>
+            <h1>범준쌤의 코딩교실</h1>
+            <p>코딩 교육의 새로운 패러다임</p>
+        </div>-->
+        <p id="load">Firebase SDK Loading&hellip;</p>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contents').load('home');
+
+            var menuArr = ['home', 'info', 'guidelines', 'lectures', 'community'];
+            $('#head nav li').each(function(idx, item) {
+                $(item).click(function() {
+                    $('#contents').load(menuArr[idx]);
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+            try {
+                let app = firebase.app();
+                let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+                document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+                console.error(e);
+                document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+            }
+        });
+
     </script>
-  </body>
+</body>
+
 </html>
